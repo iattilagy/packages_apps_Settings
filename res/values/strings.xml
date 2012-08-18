@@ -2468,6 +2468,18 @@ found in the list of installed apps.</string>
     <!-- Manage applications, text for Move button when move is in progress -->
     <string name="moving">Moving</string>
 
+    <!-- Storage setting. Menu option for generic storage settings [CHAR LIMIT=30]-->
+    <string name="storage_menu_storage">Storage configuration</string>
+    <!-- Storage setting. Title for generic storage settings [CHAR LIMIT=30]-->
+    <string name="storage_title_storage">Storage configuration</string>
+    <!-- Storage setting. Storage layout setup [CHAR LIMIT=30]-->
+    <string name="storage_layout">Layout configuration</string>
+    <!-- Storage layout Settings : Switch storage mountpoints -->
+    <string name="storage_switch_title">Use internal storage</string>
+    <string name="storage_switch_summary_on">Using expanded internal storage for apps and media</string>
+    <string name="storage_switch_summary_off">Using SD Card for apps and media</string>
+    <string name="storage_switch_unavailable">This device doesn\'t have expanded internal storage</string>
+ 
     <!-- Manage applications, text for move error messages -->
     <string name="insufficient_storage">Not enough storage space.</string>
     <string name="does_not_exist">App doesn\'t exist.</string>
