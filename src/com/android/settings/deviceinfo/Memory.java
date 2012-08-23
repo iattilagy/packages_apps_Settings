@@ -45,6 +45,7 @@ import android.widget.Toast;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
 public class Memory extends SettingsPreferenceFragment {
     private static final String TAG = "MemorySettings";
@@ -115,6 +116,10 @@ public class Memory extends SettingsPreferenceFragment {
         // only show options menu if we are not using the legacy USB mass storage support
         // or if we need the mountpoints switcher
         setHasOptionsMenu(!mMassStorageEnabled || mHasSwitchableStorage);
+    }
+
+    private boolean isMassStorageEnabled() {
+      return mMassStorageEnabled;
     }
 
     @Override
@@ -228,7 +233,9 @@ public class Memory extends SettingsPreferenceFragment {
             StorageVolumePreferenceCategory svpc = mStorageVolumePreferenceCategories[i];
             Intent intent = svpc.intentForClick(preference);
             if (intent != null) {
+		 if (!Utils.isMonkeyRunning()) {
                 startActivity(intent);
+		}
                 return true;
             }
 
